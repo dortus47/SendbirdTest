@@ -11,6 +11,7 @@
 		03516CF5290D2E21009AEF56 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03516CF4290D2E21009AEF56 /* ContentView.swift */; };
 		03516CF7290D2E22009AEF56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03516CF6290D2E22009AEF56 /* Assets.xcassets */; };
 		03516CFA290D2E22009AEF56 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03516CF9290D2E22009AEF56 /* Preview Assets.xcassets */; };
+		6141A3DF598CCB9192765B2F /* Pods_SendbirdTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEBDE7F95A648D106C06E676 /* Pods_SendbirdTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,9 @@
 		03516CF4290D2E21009AEF56 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		03516CF6290D2E22009AEF56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03516CF9290D2E22009AEF56 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0CFC7F5D2E1772413BA6E7A2 /* Pods-SendbirdTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SendbirdTest.release.xcconfig"; path = "Target Support Files/Pods-SendbirdTest/Pods-SendbirdTest.release.xcconfig"; sourceTree = "<group>"; };
+		83EF06CB58B58D593D1222E1 /* Pods-SendbirdTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SendbirdTest.debug.xcconfig"; path = "Target Support Files/Pods-SendbirdTest/Pods-SendbirdTest.debug.xcconfig"; sourceTree = "<group>"; };
+		CEBDE7F95A648D106C06E676 /* Pods_SendbirdTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SendbirdTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6141A3DF598CCB9192765B2F /* Pods_SendbirdTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,6 +42,8 @@
 			children = (
 				03516CF1290D2E21009AEF56 /* SendbirdTest */,
 				03516CF0290D2E21009AEF56 /* Products */,
+				10E6B25F0063DD51E08550EE /* Pods */,
+				8F2A4AB0CC696D4C785A8076 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		10E6B25F0063DD51E08550EE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				83EF06CB58B58D593D1222E1 /* Pods-SendbirdTest.debug.xcconfig */,
+				0CFC7F5D2E1772413BA6E7A2 /* Pods-SendbirdTest.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8F2A4AB0CC696D4C785A8076 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CEBDE7F95A648D106C06E676 /* Pods_SendbirdTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 03516CFD290D2E22009AEF56 /* Build configuration list for PBXNativeTarget "SendbirdTest" */;
 			buildPhases = (
+				09F4CCE7C26904B178D85242 /* [CP] Check Pods Manifest.lock */,
 				03516CEB290D2E21009AEF56 /* Sources */,
 				03516CEC290D2E21009AEF56 /* Frameworks */,
 				03516CED290D2E21009AEF56 /* Resources */,
+				827A28EED6DFB406E1E5E981 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09F4CCE7C26904B178D85242 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SendbirdTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		827A28EED6DFB406E1E5E981 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SendbirdTest/Pods-SendbirdTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SendbirdTest/Pods-SendbirdTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SendbirdTest/Pods-SendbirdTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		03516CEB290D2E21009AEF56 /* Sources */ = {
@@ -261,6 +330,7 @@
 		};
 		03516CFE290D2E22009AEF56 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83EF06CB58B58D593D1222E1 /* Pods-SendbirdTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -290,6 +360,7 @@
 		};
 		03516CFF290D2E22009AEF56 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CFC7F5D2E1772413BA6E7A2 /* Pods-SendbirdTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-SendbirdTest/Pods-SendbirdTest-frameworks.sh
+${PODS_XCFRAMEWORKS_BUILD_DIR}/SendBirdUIKit/SendbirdUIKit.framework/SendbirdUIKit
+${PODS_XCFRAMEWORKS_BUILD_DIR}/SendbirdChatSDK/SendbirdChatSDK.framework/SendbirdChatSDK
